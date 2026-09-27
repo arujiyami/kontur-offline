@@ -1,17 +1,11 @@
 Контур — офлайн для .gguf, Windows 10
-======================================
 
-В этой папке нет .exe. Движок llama.cpp ставится отдельно, одним архивом с GitHub.
+Свой instruct-файл .gguf положи в папку models.
+llama-server.exe сюда не вложен: это бинарник на ~42 МБ, а заливка из чата пишет только текст.
 
-1. Скачай этот репозиторий: кнопка Code → Download ZIP, и распакуй.
-2. Если видишь Start.bat.txt и server.ps1.txt — убери у обоих окончание .txt,
-   чтобы получились Start.bat и server.ps1.
-3. Скачай и распакуй в папку llama (чтобы внутри лежал llama-server.exe):
-   https://github.com/ggml-org/llama.cpp/releases/download/b11223/llama-b11223-bin-win-cpu-x64.zip
-4. Положи свой instruct .gguf в папку models.
-   Если файлов несколько — имя нужного одной строкой в model.txt.
-5. Запусти Start.bat. Окно не закрывай.
-   Браузер откроется на http://127.0.0.1:8787 — выбери «Офлайн».
+Скачай официальный Windows CPU-сборок llama.cpp и распакуй его в папку llama,
+чтобы рядом со Start.bat лежал llama/llama-server.exe:
 
-Дальше сеть не нужна. Сейв остаётся в браузере.
-Каждый ответ модели двигает сцену и время.
+https://github.com/ggml-org/llama.cpp/releases/download/b11223/llama-b11223-bin-win-cpu-x64.zip
+
+Потом запусти Start.bat и выбери оболочку «Офлайн».
